@@ -1,4 +1,6 @@
 
+using ExMiddleware.Middleware;
+
 namespace ExMiddleware
 {
     public class Program
@@ -27,6 +29,7 @@ namespace ExMiddleware
 
             app.UseAuthorization();
 
+            app.UseMiddleware<ExampleMiddleware>();
 
             app.MapControllers();
 
